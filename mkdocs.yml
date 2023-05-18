@@ -1,0 +1,19 @@
+site_name: shawn
+site_description: Use ChatGPT from terminal
+site_author: William Bonvini
+
+repo_url: https://github.com/WilliamBonvini/shawn
+edit_uri: https://github.com/WilliamBonvini/shawn/edit/main/docs
+
+theme: readthedocs
+
+markdown_extensions:
+  - codehilite
+
+nav:
+  - Home: index.md
+  - Advanced: advanced.md
+  - About:
+    - Release Notes: about/changelog.md
+    - Contributor Guide: about/contributing.md
+    - License: about/license.md
