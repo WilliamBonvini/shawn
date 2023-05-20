@@ -2,11 +2,17 @@ import typer
 import os
 import openai
 from rich import print
+from rich.console import Console
+from rich.panel import Panel
+from rich.markdown import Markdown
+
+from utils import highlight_code, get_response, foo
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 app = typer.Typer()
+console = Console()
 
 
 @app.command()
@@ -21,30 +27,18 @@ def setup():
 
 @app.command()
 def shawn():
+    console.print(Panel("Hey there, how can I help you?\n", title="Shawn", border_style="blue"))
+    content = typer.prompt("") + " (if for any reason you are going to provide me a coding snippet make sure to append the language name to the heading three ```)"
+    while True:
+        response = get_response(content)
+        with open("you.txt", "w") as f:
+            f.write(response)
 
-    content = typer.prompt("Hey there, how can I help you?\n")
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "user", "content": content}
-        ]
-    )
-    response = completion.choices[0].message.content
-    with open("you.txt", "w") as f:
-        f.write(response)
-    print(response)
+        md = Markdown(response)
+        panel = Panel(md, title="Shawn", border_style="blue")
+        console.print(panel)
+        content = typer.prompt("")
 
 
 if __name__ == "__main__":
     app()
-
-
-"""
-Roadmap:
-
-find out how to identify coding language used in ''' brackets.
-tell rich to syntax highlight correctly those substrings that I am able to identify. 
-print the remaining substrings normally.
-find a nice way to wrap the code snippets in. 
-find a nice way to show when shawn is speaking, and when it's you that is speaking.
-"""
