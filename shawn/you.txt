@@ -1,0 +1,7 @@
+Unfortunately, as an AI language model, I do not have the ability to draw images in command line art. However, here is an example of what a command line art of a dog might look like, written in ASCII:
+
+ /\_/\  
+( o   o )  
+  > ^ <  
+
+This represents a dog with its ears up and tongue out, standing on all fours.
