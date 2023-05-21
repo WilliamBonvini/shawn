@@ -3,7 +3,7 @@
 """Package entry point."""
 
 
-from shawn.cli import main
+from shawn import main
 
 
 if __name__ == '__main__':  # pragma: no cover
