@@ -10,3 +10,5 @@ def get_response(content: str) -> str:
     )
     response = completion.choices[0].message.content
     return response
+
+

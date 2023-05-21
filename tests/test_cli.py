@@ -6,7 +6,7 @@ from expecter import expect
 
 from click.testing import CliRunner
 
-from shawn.cli import main
+from shawn import main
 
 
 @pytest.fixture
