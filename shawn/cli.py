@@ -1,5 +1,7 @@
-import typer
 import os
+
+from halo import Halo
+import typer
 import openai
 from rich import print
 from rich.console import Console
@@ -7,7 +9,7 @@ from rich.panel import Panel
 from rich.markdown import Markdown
 
 from shawn import DETAILS
-from shawn.utils import get_response
+from shawn.utils import get_response, explain_file
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
@@ -28,12 +30,16 @@ def setup():
 
 @app.command()
 def chat():
+    """
+    Chat with Shawn.
+    """
     console.print(Panel("Hey there, how can I help you?\n", title="Shawn", border_style="blue"))
     content = typer.prompt("") + DETAILS
     while True:
+        spinner = Halo(text='Thinking...', spinner='flip')
+        spinner.start()
         response = get_response(content)
-        with open("you.txt", "w") as f:
-            f.write(response)
+        spinner.stop()
 
         md = Markdown(response)
         panel = Panel(md, title="Shawn", border_style="blue")
@@ -43,6 +49,7 @@ def chat():
 
 @app.command()
 def dig(p: str):
+    """"""
     if os.path.isfile(p):
         explain_file(p)
     elif os.path.isdir(p):
@@ -52,19 +59,6 @@ def dig(p: str):
                 explain_file(file_path)
     else:
         console.print(f'Error: {p} is not a valid path.')
-
-
-def explain_file(p):
-    content = f"Can you explain to me what the following code does? write as a markdown h1 header the name of the file ({p}) before starting the explanation\n\n"
-    content += DETAILS
-    with open(p, "r") as f:
-        content += f.read()
-
-    response = get_response(content)
-
-    md = Markdown(response)
-    panel = Panel(md, title="Shawn", border_style="blue")
-    console.print(panel)
 
 
 if __name__ == "__main__":

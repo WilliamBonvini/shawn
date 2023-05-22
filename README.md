@@ -1,6 +1,12 @@
-# Overview
+# Shawn
+<div style="text-align: center;">
+  <img src="docs/imgs/shawn.png" style="max-width: 20%; height: auto;">
+</div>
 
-Use ChatGPT from terminal
+Shawn is a dog.  
+Shawn is a software engineer.   
+Shawn is, most importantly, a command line tool that provides you with well formatted answers to you code related questions. 
+
 
 This project was generated with [cookiecutter](https://github.com/audreyr/cookiecutter) using [jacebrowning/template-python](https://github.com/jacebrowning/template-python).
 
@@ -36,8 +42,17 @@ $ poetry add shawn
 
 After installation, the package can be imported:
 
-```text
-$ python
->>> import shawn
->>> shawn.__version__
+```bash
+$ shawn chat
+
 ```
+
+
+```bash
+$ shawn dig path/to/file.c
+```
+
+```bash
+$ shawn dig path/to/folder
+```
+
