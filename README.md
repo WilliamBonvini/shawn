@@ -1,6 +1,6 @@
 # Shawn
 <div style="text-align: center;">
-  <img src="docs/imgs/shawn.png" style="max-width: 20%; height: auto;">
+  <img src="docs/imgs/shawn.png" style="width: 20%; height: auto;">
 </div>
 
 Shawn is a dog.  
