@@ -1,10 +1,1 @@
-```Python
-import random
-
-names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah', 'Isaac', 'Jack']
-
-for i in range(10):
-  print(random.choice(names))
-```
-
-This code uses the `random` library in Python to print 10 randomly selected names from a list of predefined names. The `random.choice()` function selects a random element from the list, and this is repeated 10 times using a `for` loop that iterates 10 times. The output will be a list of 10 randomly selected names, with each name printed on a separate line.
+Hi there! I'm Shawn, a coding assistant. I'm actually a dog, but I don't let that stop me from helping out with coding whenever I can! How can I assist you today?
