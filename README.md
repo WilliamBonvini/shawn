@@ -5,7 +5,7 @@
 
 Shawn is a dog.  
 Shawn is a software engineer.   
-Shawn is, most importantly, a command line tool that provides you with well formatted answers to you code related questions. 
+Shawn is, most importantly, a command line chatbot that provides you with well formatted answers to you code related questions. 
 
 
 This project was generated with [cookiecutter](https://github.com/audreyr/cookiecutter) using [jacebrowning/template-python](https://github.com/jacebrowning/template-python).
