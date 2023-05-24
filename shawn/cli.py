@@ -1,46 +1,47 @@
 import os
 
-from halo import Halo
-import typer
 import openai
+import typer
+from halo import Halo
 from rich import print
 from rich.console import Console
-from rich.panel import Panel
 from rich.markdown import Markdown
+from rich.panel import Panel
 
-from shawn import DETAILS
-from shawn.utils import get_response, explain_file
+from shawn import DETAILS, spinner
+from shawn.utils import explain_file, get_response
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = OPENAI_API_KEY
+#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+#openai.api_key = OPENAI_API_KEY
 
 app = typer.Typer()
 console = Console()
 
 
 @app.command()
-def setup():
-    if OPENAI_API_KEY is not None:
-        print("No setup is needed, since your OPENAI_API_KEY environment variable is non empty.")
+def doctor():
+    """ Check whether there are any configuration problems """
+    if os.getenv("OPENAI_API_KEY") is not None:
+        print(
+            "you are good to go, since your OPENAI_API_KEY environment variable is not empty."
+        )
         return
-    api_key = typer.prompt("OpenAI API Key: ")
-    openai.api_key = api_key
-    print("Congratulations! Shawn is ready to help you. just write \"shawn\" in your terminal and he will assist you.")
+    raise EnvironmentError("OPENAI_API_KEY is not set.")
 
 
 @app.command()
-def chat():
+def chat() -> None:
     """
-    Chat with Shawn.
+    chat by asking open-ended code related questions
     """
-    console.print(Panel("Hey there, how can I help you?\n", title="Shawn", border_style="blue"))
+    console.print(
+        Panel("Hey there, how can I help you?\n", title="Shawn", border_style="blue")
+    )
     content = typer.prompt("") + DETAILS
     while True:
-        spinner = Halo(text='Thinking...', spinner='flip')
         spinner.start()
         response = get_response(content)
         spinner.stop()
-
         md = Markdown(response)
         panel = Panel(md, title="Shawn", border_style="blue")
         console.print(panel)
@@ -48,8 +49,8 @@ def chat():
 
 
 @app.command()
-def dig(p: str):
-    """"""
+def dig(p: str) -> None:
+    """describe the content of a single source file or an entire directory of files"""
     if os.path.isfile(p):
         explain_file(p)
     elif os.path.isdir(p):
@@ -58,7 +59,7 @@ def dig(p: str):
                 file_path = os.path.join(root, name)
                 explain_file(file_path)
     else:
-        console.print(f'Error: {p} is not a valid path.')
+        console.print(f"Error: {p} is not a valid path.")
 
 
 if __name__ == "__main__":

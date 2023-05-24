@@ -1,19 +1,17 @@
 import openai
+from halo import Halo
+from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
-from rich.console import Console
 
-from shawn import DETAILS
+from shawn import DETAILS, spinner
 
 console = Console()
 
 
 def get_response(content: str) -> str:
     completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "user", "content": content}
-        ]
+        model="gpt-3.5-turbo", messages=[{"role": "user", "content": content}]
     )
     response = completion.choices[0].message.content
     return response
@@ -25,7 +23,9 @@ def explain_file(p: str) -> None:
     with open(p, "r") as f:
         content += f.read()
 
+    spinner.start()
     response = get_response(content)
+    spinner.stop()
 
     md = Markdown(response)
     panel = Panel(md, title="Shawn", border_style="blue")

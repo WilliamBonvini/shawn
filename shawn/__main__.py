@@ -3,10 +3,7 @@
 """Package entry point."""
 
 
-from shawn import main
+from shawn.cli import app
 
-
-if __name__ == '__main__':  # pragma: no cover
-    main()  # pylint: disable=no-value-for-parameter
-
-
+if __name__ == "__main__":  # pragma: no cover
+    app()  # pylint: disable=no-value-for-parameter
