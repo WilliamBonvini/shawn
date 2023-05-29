@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="353a8fdd-6fdb-4983-847e-47d4478f17aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shawn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shawn.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/profile_default/ipython_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/profile_default/ipython_config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shawn/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/shawn/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shawn/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/shawn/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shawn/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/shawn/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shawn/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/shawn/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shawn/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shawn/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/shawn/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/you.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +160,9 @@
       <workItem from="1684600722510" duration="201000" />
       <workItem from="1684600926842" duration="14676000" />
       <workItem from="1684875799149" duration="4401000" />
+      <workItem from="1684965235035" duration="684000" />
+      <workItem from="1684965956548" duration="11623000" />
+      <workItem from="1685393421750" duration="982000" />
     </task>
     <servers />
   </component>
