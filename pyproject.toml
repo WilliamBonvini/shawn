@@ -23,12 +23,12 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.8",
 ]
 
 [tool.poetry.dependencies]
 
-python = "^3.9"
+python = "^3.8"
 
 minilog = "*"
 typer = {extras = ["all"], version = "^0.9.0"}
@@ -73,7 +73,11 @@ ipython = "^7.12.0"
 
 [tool.poetry.scripts]
 
-shawn = "shawn.cli:main"
+shawn = "shawn.__main__:app"
+
+[tool.poetry.group.dev.dependencies]
+py2app = "^0.28.5"
+build = "^0.10.0"
 
 [tool.black]
 
