@@ -10,10 +10,6 @@ Shawn is, most importantly, a command line chatbot that provides you with well f
 
 This project was generated with [cookiecutter](https://github.com/audreyr/cookiecutter) using [jacebrowning/template-python](https://github.com/jacebrowning/template-python).
 
-[![Unix Build Status](https://img.shields.io/github/actions/workflow/status/WilliamBonvini/shawn/main.yml?branch=main&label=linux)](https://github.com/WilliamBonvini/shawn/actions)
-[![Windows Build Status](https://img.shields.io/appveyor/ci/WilliamBonvini/shawn.svg?label=windows)](https://ci.appveyor.com/project/WilliamBonvini/shawn)
-[![Coverage Status](https://img.shields.io/codecov/c/gh/WilliamBonvini/shawn)](https://codecov.io/gh/WilliamBonvini/shawn)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/WilliamBonvini/shawn.svg)](https://scrutinizer-ci.com/g/WilliamBonvini/shawn)
 [![PyPI License](https://img.shields.io/pypi/l/shawn.svg)](https://pypi.org/project/shawn)
 [![PyPI Version](https://img.shields.io/pypi/v/shawn.svg)](https://pypi.org/project/shawn)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/shawn.svg?color=orange)](https://pypistats.org/packages/shawn)
@@ -22,11 +18,11 @@ This project was generated with [cookiecutter](https://github.com/audreyr/cookie
 
 ### Requirements
 
-* Python 3.9+
+* Python 3.8+
 
 ### Installation
 
-Install it directly into an activated virtual environment:
+Install it with pip
 
 ```text
 $ pip install shawn
@@ -40,13 +36,13 @@ $ poetry add shawn
 
 ## Usage
 
-After installation, the package can be imported:
+After installation, you can start chatting with the following command:
 
 ```bash
 $ shawn chat
 
 ```
-
+or ask Shawn to explain in natural language your source code
 
 ```bash
 $ shawn dig path/to/file.c
