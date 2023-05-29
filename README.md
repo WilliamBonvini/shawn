@@ -1,4 +1,7 @@
 # Shawn
+[![PyPI License](https://img.shields.io/pypi/l/shawn.svg)](https://pypi.org/project/shawn)
+[![PyPI Version](https://img.shields.io/pypi/v/shawn.svg)](https://pypi.org/project/shawn)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/shawn.svg?color=orange)](https://pypistats.org/packages/shawn)
 <div style="text-align: center;">
   <img src="docs/imgs/shawn.png" style="width: 20%; height: auto;">
 </div>
@@ -6,10 +9,6 @@
 Shawn is a dog.  
 Shawn is a software engineer.   
 Shawn is, most importantly, a command line chatbot that provides you with well formatted answers to you code related questions. 
-
-[![PyPI License](https://img.shields.io/pypi/l/shawn.svg)](https://pypi.org/project/shawn)
-[![PyPI Version](https://img.shields.io/pypi/v/shawn.svg)](https://pypi.org/project/shawn)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/shawn.svg?color=orange)](https://pypistats.org/packages/shawn)
 
 ## Setup
 
