@@ -48,3 +48,6 @@ coverage.xml
 
 # Eclipse
 .settings
+
+# JetBrains
+.idea
