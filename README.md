@@ -38,7 +38,7 @@ After installation, you can start chatting with the following command:
 $ shawn chat
 
 ```
-or ask Shawn to explain in natural language your source code
+or ask Shawn to explain your source code in natural language
 
 ```bash
 $ shawn dig path/to/file.c
