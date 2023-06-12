@@ -1,8 +1,9 @@
+import datetime
 import os
+import sys
 
-import openai
 import typer
-from halo import Halo
+
 from rich import print
 from rich.console import Console
 from rich.markdown import Markdown
@@ -11,8 +12,6 @@ from rich.panel import Panel
 from shawn import DETAILS, spinner
 from shawn.utils import explain_file, get_response
 
-#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-#openai.api_key = OPENAI_API_KEY
 
 app = typer.Typer()
 console = Console()
@@ -50,7 +49,7 @@ def chat() -> None:
 
 @app.command()
 def dig(p: str) -> None:
-    """describe the content of a single source file or an entire directory of files"""
+    """ describe the content of a single source file or an entire directory of files """
     if os.path.isfile(p):
         explain_file(p)
     elif os.path.isdir(p):
@@ -62,5 +61,18 @@ def dig(p: str) -> None:
         console.print(f"Error: {p} is not a valid path.")
 
 
-if __name__ == "__main__":
-    app()
+@app.command()
+def invenv() -> None:
+    """ return True if you are in a virtual environment, false otherwise """
+    print(sys.prefix != sys.base_prefix)
+
+
+@app.command()
+def time() -> None:
+    print(datetime.datetime.strftime(datetime.datetime.now(), "%H:%m"))
+
+
+@app.command()
+def date() -> None:
+    print(datetime.datetime.strftime(datetime.datetime.now(), "%d %B %Y"))
+
