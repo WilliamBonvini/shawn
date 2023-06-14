@@ -1,7 +1,7 @@
 [tool.poetry]
 
 name = "shawn"
-version = "0.0"
+version = "0.1.1"
 description = "Use ChatGPT from terminal"
 
 packages = [{ include = "shawn" }]
