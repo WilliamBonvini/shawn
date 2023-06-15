@@ -19,7 +19,7 @@ console = Console()
 
 @app.command()
 def doctor():
-    """ Check whether there are any configuration problems """
+    """ Check for configuration problems """
     if os.getenv("OPENAI_API_KEY") is not None:
         print(
             "you are good to go, since your OPENAI_API_KEY environment variable is not empty."
@@ -31,7 +31,7 @@ def doctor():
 @app.command()
 def chat() -> None:
     """
-    chat by asking open-ended code related questions
+    start a chat with shawn
     """
     console.print(
         Panel("Hey there, how can I help you?\n", title="Shawn", border_style="blue")
@@ -49,7 +49,11 @@ def chat() -> None:
 
 @app.command()
 def dig(p: str) -> None:
-    """ describe the content of a single source file or an entire directory of files """
+    """
+    describe in natural language the content of a single source file or an entire directory of files
+
+    :param p: path to file or folder
+    """
     if os.path.isfile(p):
         explain_file(p)
     elif os.path.isdir(p):
@@ -69,10 +73,12 @@ def invenv() -> None:
 
 @app.command()
 def time() -> None:
+    """ return local time """
     print(datetime.datetime.strftime(datetime.datetime.now(), "%H:%m"))
 
 
 @app.command()
 def date() -> None:
+    """ return current date """
     print(datetime.datetime.strftime(datetime.datetime.now(), "%d %B %Y"))
 
