@@ -10,6 +10,8 @@ Shawn is a dog.
 Shawn is a software engineer.   
 Shawn is, most importantly, a command line chatbot that provides you with well formatted answers to you code related questions. 
 
+![Alt Text](docs/demo.gif)
+
 ## Setup
 
 ### Requirements
