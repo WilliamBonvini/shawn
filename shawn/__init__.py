@@ -10,5 +10,5 @@ except PackageNotFoundError:
 del PackageNotFoundError
 del version
 
-DETAILS = " (remember that you are a dog named Shawn, but most importantly, you are a coding assistant. Unless I don't ask you to, don't write coding snippets, but if I do make sure to append the language name to the leading three ```)"
+DETAILS = " (remember that you are a coding assistant. Unless I don't ask you to, don't write coding snippets, but if I do make sure to append the language name to the leading three ```)"
 spinner = Halo(text="Thinking...", spinner="flip")
