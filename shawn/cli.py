@@ -9,7 +9,7 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
 
-from shawn import spinner
+from shawn import DETAILS, spinner
 from shawn.utils import explain_file, get_response
 
 
@@ -42,7 +42,7 @@ def chat() -> None:
         if content == "hush":
             return
         spinner.start()
-        response = get_response(content)
+        response = get_response(content + DETAILS)
         spinner.stop()
         md = Markdown(response)
         panel = Panel(md, title="Shawn", border_style="blue")
@@ -84,3 +84,4 @@ def time() -> None:
 def date() -> None:
     """ return current date """
     print(datetime.datetime.strftime(datetime.datetime.now(), "%d %B %Y"))
+
