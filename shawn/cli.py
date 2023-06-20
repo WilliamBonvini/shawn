@@ -36,10 +36,13 @@ def chat() -> None:
     console.print(
         Panel("Hey there, how can I help you?\n", title="Shawn", border_style="blue")
     )
-    content = typer.prompt("") + DETAILS
+    content = typer.prompt("")
+
     while True:
+        if content == "hush":
+            return
         spinner.start()
-        response = get_response(content)
+        response = get_response(content + DETAILS)
         spinner.stop()
         md = Markdown(response)
         panel = Panel(md, title="Shawn", border_style="blue")
