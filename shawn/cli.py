@@ -9,8 +9,8 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
 
-from shawn import DETAILS, spinner
-from shawn.utils import explain_file, get_response
+from shawn import spinner, assistant
+from shawn.utils import explain_file
 
 
 app = typer.Typer()
@@ -42,7 +42,8 @@ def chat() -> None:
         if content == "hush":
             return
         spinner.start()
-        response = get_response(content + DETAILS)
+        assistant.add_message(role="user", content=content)
+        response = assistant.chat()
         spinner.stop()
         md = Markdown(response)
         panel = Panel(md, title="Shawn", border_style="blue")
