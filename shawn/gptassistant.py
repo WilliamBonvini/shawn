@@ -2,7 +2,7 @@ import openai
 
 
 class GPTAssistant:
-    def __init__(self, api_key: str, model: str = "gpt3.5-turbo"):
+    def __init__(self, api_key: str, model: str = "gpt-3.5-turbo"):
         self.api_key = api_key
         self.model = model
         openai.api_key = api_key
@@ -31,7 +31,8 @@ class GPTAssistant:
         """
         response = openai.ChatCompletion.create(
             model=self.model,
-            messages=self.messages
+            messages=self.messages,
+            stream=False
         )
         assistant_reply = response['choices'][0]['message']['content']
         self.add_message("assistant", assistant_reply)  # Add assistant's response to history
