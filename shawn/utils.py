@@ -1,20 +1,10 @@
-import openai
-from halo import Halo
 from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
 
-from shawn import DETAILS, spinner
+from shawn import spinner, assistant
 
 console = Console()
-
-
-def get_response(content: str) -> str:
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo", messages=[{"role": "user", "content": content}]
-    )
-    response = completion.choices[0].message.content
-    return response
 
 
 def explain_file(p: str) -> None:
@@ -24,7 +14,8 @@ def explain_file(p: str) -> None:
         content += f.read()
 
     spinner.start()
-    response = get_response(content)
+    assistant.add_message("user", "content")
+    response = assistant.chat()
     spinner.stop()
 
     md = Markdown(response)

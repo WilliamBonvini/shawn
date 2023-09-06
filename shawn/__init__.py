@@ -1,6 +1,9 @@
+import os
 from importlib.metadata import PackageNotFoundError, version
 
 from halo import Halo
+
+from gptassistant import GPTAssistant
 
 try:
     __version__ = version("shawn")
@@ -10,5 +13,7 @@ except PackageNotFoundError:
 del PackageNotFoundError
 del version
 
-DETAILS = " (remember that you are a coding assistant. Unless I don't ask you to, don't write coding snippets, but if I do make sure to append the language name to the leading three ```)"
+api_key = os.getenv("OPENAI_API_KEY")
+
 spinner = Halo(text="Thinking...", spinner="flip")
+assistant = GPTAssistant(api_key=api_key)
