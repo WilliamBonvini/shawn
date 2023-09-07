@@ -62,5 +62,4 @@ $ shawn dig path/to/file.c
 $ shawn dig path/to/folder
 ```
 
-Ensure you're ready to experience the benefits of Shawn in your coding journey.
 
