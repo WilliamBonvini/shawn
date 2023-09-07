@@ -6,9 +6,7 @@
   <img src="docs/imgs/shawn.png" style="width: 20%; height: auto;">
 </div>
 
-Shawn is a dog.  
-Shawn is a software engineer.   
-Shawn is, most importantly, a command line chatbot that provides you with well formatted answers to you code related questions. 
+Shawn is a command line chatbot that provides you with well-formatted answers to your code-related questions. 
 
 ![Alt Text](docs/demo.gif)
 
