@@ -1,4 +1,5 @@
-# Shawn
+# Welcome to Shawn: Your Code Buddy 🐕‍🦺
+
 [![PyPI License](https://img.shields.io/pypi/l/shawn.svg)](https://pypi.org/project/shawn)
 [![PyPI Version](https://img.shields.io/pypi/v/shawn.svg)](https://pypi.org/project/shawn)
 [![PyPI Downloads](https://img.shields.io/pypi/dm/shawn.svg?color=orange)](https://pypistats.org/packages/shawn)
