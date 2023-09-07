@@ -6,17 +6,29 @@
   <img src="docs/imgs/shawn.png" style="width: 20%; height: auto;">
 </div>
 
-Shawn is a command line chatbot that provides you with well-formatted answers to your code-related questions. 
+Shawn is your go-to command-line chatbot for all your coding queries. It's designed to make your coding experience smoother and more efficient.
+
+**Features**:
+* **Instant Code Answers**: Shawn taps into the power of OpenAI's Chat Completion API and custom-made functionalities to deliver well-structured and informative responses to your coding questions.
+
+* **Machine Awareness**: It goes the extra mile by understanding and providing information about your machine's state, ensuring tailored assistance.
+
+* **Syntax-Highlighted Code Snippets**: When you seek code suggestions, Shawn doesn't just provide answers; it delivers beautifully syntax-highlighted markdown code snippets.
+
+* **Seamless Coding Sessions**: Our primary goal is to minimize context-switching during your coding sessions. With Shawn, you can stay in the flow and get answers without leaving your terminal.
+
+Whether you're a seasoned developer or just starting your coding journey, Shawn is here to make your life easier. Try it now and elevate your coding experience! 🚀
+ 
 
 ![Alt Text](docs/demo.gif)
 
-## Setup
+### Setup
 
-### Requirements
+#### Requirements
 
 * Python 3.8+
 
-### Installation
+#### Installation
 
 Install it with pip
 
@@ -29,16 +41,18 @@ or add it to your [Poetry](https://poetry.eustace.io/) project:
 ```text
 $ poetry add shawn
 ```
+### Getting Started
+Once Shawn is installed, you can utilize it through the following commands:
 
-## Usage
-
-After installation, you can start chatting with the following command:
+#### Start a Chat
+To initiate a chat session with Shawn, execute the following command:
 
 ```bash
 $ shawn chat
-
 ```
-or ask Shawn to explain your source code in natural language
+
+#### Code Explanation
+For a detailed natural language explanation of your source code, use the following commands:
 
 ```bash
 $ shawn dig path/to/file.c
@@ -47,4 +61,6 @@ $ shawn dig path/to/file.c
 ```bash
 $ shawn dig path/to/folder
 ```
+
+Ensure you're ready to experience the benefits of Shawn in your coding journey.
 
