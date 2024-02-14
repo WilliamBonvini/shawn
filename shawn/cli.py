@@ -9,12 +9,15 @@ from rich.console import Console
 from rich.markdown import Markdown
 from rich.panel import Panel
 
-from shawn import spinner, assistant
+from shawn import spinner, api_key
 from shawn.utils import explain_file
+from shawn.gptassistant import GPTAssistant
+
 
 
 app = typer.Typer()
 console = Console()
+assistant = GPTAssistant(api_key=api_key)
 
 
 @app.command()
@@ -59,12 +62,12 @@ def dig(p: str) -> None:
     :param p: path to file or folder
     """
     if os.path.isfile(p):
-        explain_file(p)
+        explain_file(assistant=assistant, p=p)
     elif os.path.isdir(p):
         for root, dirs, files in os.walk(p):
             for name in files:
                 file_path = os.path.join(root, name)
-                explain_file(file_path)
+                explain_file(assistant=assistant, p=file_path)
     else:
         console.print(f"Error: {p} is not a valid path.")
 
