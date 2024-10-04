@@ -1,4 +1,6 @@
-# Welcome to Shawn: Your Code Buddy 🐕‍🦺
+# ⚠️ This repository is now archived and no longer actively maintained.
+
+# Shawn - Code Assistant 🐕‍🦺
 
 [![PyPI License](https://img.shields.io/pypi/l/shawn.svg)](https://pypi.org/project/shawn)
 [![PyPI Version](https://img.shields.io/pypi/v/shawn.svg)](https://pypi.org/project/shawn)
@@ -15,10 +17,6 @@ Shawn is your go-to command-line chatbot for all your coding queries. It's desig
 * **Machine Awareness**: It goes the extra mile by understanding and providing information about your machine's state, ensuring tailored assistance.
 
 * **Syntax-Highlighted Code Snippets**: When you seek code suggestions, Shawn doesn't just provide answers; it delivers beautifully syntax-highlighted markdown code snippets.
-
-* **Seamless Coding Sessions**: Our primary goal is to minimize context-switching during your coding sessions. With Shawn, you can stay in the flow and get answers without leaving your terminal.
-
-Whether you're a seasoned developer or just starting your coding journey, Shawn is here to make your life easier. Try it now and elevate your coding experience! 🚀
  
 
 ![Alt Text](docs/demo.gif)
